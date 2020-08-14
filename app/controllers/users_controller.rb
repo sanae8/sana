@@ -11,8 +11,9 @@ class UsersController < ApplicationController
   def show
   end
 
-  def new
-    @user = User.new
+  def show
+    @first_day = Date.current.beginning_of_month
+    @last_day = @first_day.end_of_month
   end
 
   def create
